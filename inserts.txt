@@ -1,0 +1,16 @@
+des 
+
+//Michael Lentzis
+
+// inputs to tables
+
+
+insert into categories values(913,'sailing','sailing is hard to learn');
+
+insert into posts values(623,'That was interesting!',(to_date('01-oct-1997', 'dd-mm-yyyy')),424,913);
+
+insert into users values(13,'john l','57474','johnl@gmail.com', (to_date('12-jan-2008', 'dd-mm-yyyy'));
+
+insert into categories values(1000,'kangaroos','they jump over 3 humans');
+
+insert into topics values(12,'science',(to_date('24-nov-2015', 'dd-mm-yyyy')),1000, 13);

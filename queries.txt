@@ -1,0 +1,49 @@
+
+//Michael Lentzis
+
+//queries
+
+
+// find the user id who posted in the topic "science"
+
+Select user_id, post_id
+from users u, posts p
+where u.user_= p.post_id
+and 
+	(select topic_id, post_id
+	from topics t, posts p
+	where t.topic_id = p.post_id
+	and topic_subject= 'science');
+
+
+//find the category about sailing
+
+select cat_name
+from categories
+where cat_name = 'sailing';
+
+
+//find all the users who post in category "sailing"
+
+
+Select user_id, post_id
+from users u, posts p
+where u.user_= p.post_id
+and 
+	(select cat_id, post_id
+	from categories c, posts p
+	where c.cat_id = p.post_id
+	and cat_name= 'sailing');
+
+
+// find the user id who's username starts  with john and posted 2 days ago
+
+select user_id, post_id 
+from users u, post p
+where u.user_id= p.post_id
+and user_name = 'John%''
+and 
+ 
+	(select post_id
+	from posts
+	where post_date < 2)

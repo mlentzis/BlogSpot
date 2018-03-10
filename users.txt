@@ -1,0 +1,10 @@
+ CREATE TABLE users (
+    user_id     INT NOT NULL,
+    user_name   VARCHAR(30) NOT NULL,
+    user_pass   VARCHAR(255) NOT NULL,
+    user_email  VARCHAR(255) NOT NULL,
+    user_date   DATE NOT NULL,
+    user_level  INT NOT NULL,
+    CONSTRAINT user_name_unique UNIQUE (user_name),
+    PRIMARY KEY (user_id)
+    );

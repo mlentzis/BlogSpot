@@ -1,0 +1,8 @@
+create table topics (
+    topic_id   INT not null,
+    topic_subject  VARCHAR(255) not null,
+    topic_date   DATE not null,
+    topic_cat    INT(8) not null,
+    topic_by   INT(8) not null,
+    primary key (topic_id)
+    ); 
